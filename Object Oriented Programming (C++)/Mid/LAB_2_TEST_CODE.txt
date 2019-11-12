@@ -1,0 +1,97 @@
+// Example program
+#include <iostream>
+#include<string>
+using namespace std;
+
+class Person{
+    // atrributes or variables
+    private:
+        string fName;
+        string lName;  
+        int age;
+        float salary;
+    
+    // functions or methods
+    public:
+     
+        void setFirstName(string fn);
+        void setLastName(string ln);
+        void setAge(int ag);
+        void setSalary(float sal);
+        void setAllData(string fn, string ln, int ag, float sal);
+
+        string getFirstName();
+        string getLastName();
+        int getAge();
+        float getSalary();
+        
+    };
+
+void Person::setFirstName(string fn){
+    fName = fn;
+    }
+
+void Person::setLastName(string ln){
+    lName = ln;
+    }
+
+void Person::setAge(int ag){
+    age = ag;
+    }
+
+void Person::setSalary(float sal){
+    salary = sal;
+    }
+
+void Person::setAllData(string fn, string ln, int ag, float sal){
+    fName = fn;
+    lName = ln;
+    age = ag;
+    salary = sal;
+    }
+
+string Person::getFirstName(){
+    return fName;
+    }
+
+string Person::getLastName(){
+    return lName;
+    }
+
+int Person::getAge(){
+    return age;
+    }
+
+float Person::getSalary(){
+    return salary;
+    }
+
+int main()
+{
+    
+    Person p1, p2, p3;
+    p1.setFirstName("ABC");
+    p1.setLastName("xyz");
+    p1.setAge(45);
+    p1.setSalary(10000);
+    
+    cout << p1.getFirstName() << endl;
+    cout << p1.getLastName() << endl;
+    cout << p1.getAge();
+    string fn, ln;
+    int age;
+    float salary;
+    
+    cout << "Enter first name: ";
+    cin >> fn;
+    
+    cout << endl << "Enter first name: ";
+    cin >> ln;
+    
+    p2.setFirstName(fn);
+    p2.setLastName(ln);
+    
+    cout << "P2 name is: " << p2.getFirstName() << " " << p2.getLastName();
+    
+  return 0;
+}

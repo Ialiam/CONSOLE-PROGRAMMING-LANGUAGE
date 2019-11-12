@@ -1,0 +1,74 @@
+#include<iostream>
+using namespace std;
+
+//create class named studnet
+class Student{
+	//two variables
+	private:
+		string name;
+		int id;
+	//four functions.
+	public:
+		void setName(string nm);
+		void setID(int i);
+		
+		string getName();
+		int getID();	
+};
+
+void Student::setName(string nm){
+	name = nm;
+}
+
+void Student::setID(int i){
+	id = i;
+}
+
+string Student::getName(){
+	return name;
+}
+
+int Student::getID()
+{ return id;
+	}
+	
+
+int main(){
+	//Student s1,s2,s3;
+	Student s[3];
+	string name;
+	int id;
+	
+	for(int i = 0; i <3; i++){
+		cout << "Enter name and id for student s[" << i << "]: " << endl;
+		cin >> name >> id;
+		s[i].setName(name);
+		s[i].setID(id);
+	}
+	
+	for(int j = 0; j <3; j++){
+		cout << "Name and id of student s[" << j << "]: " << endl
+		<< s[j].getName() << endl << s[j].getID() << endl;
+	}
+	
+}	
+	
+			
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+

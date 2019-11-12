@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+class Rectangle
+{
+private:
+    float height;
+    float width;
+public:
+    void setHeight(float h);
+    void setWidth(float w);
+
+    float getHeight();
+    float getWidth();
+    float getArea();
+};
+void Rectangle::setHeight(float h)
+{
+    height=h;
+}
+void Rectangle::setWidth(float w)
+{
+    width=w;
+}
+float Rectangle::getHeight()
+{
+    return height;
+}
+float Rectangle::getWidth()
+{
+    return width;
+}
+float Rectangle::getArea()
+{
+    float Area;
+    Area=getHeight()*getWidth();
+    return Area;
+}
+int main()
+{
+    Rectangle r1, r2;
+    float h1, w1, h2, w2;
+    cout<<"Enter 1st Rectangle Height: ";
+    cin>>h1;
+    cout<<"Enter 1st Rectangle Width: ";
+    cin>>w1;
+    cout<<"Enter 2nd Rectangle Height: ";
+    cin>>h2;
+    cout<<"Enter 2nd Rectangle Width: ";
+    cin>>w2;
+    r1.setHeight(h1);
+    r1.setWidth(w1);
+    r2.setHeight(h2);
+    r2.setWidth(w2);
+    if(r1.getArea()>r2.getArea())
+        cout<<"The larger Area = "<<r1.getArea();
+    else
+        cout<<"The larger Area = "<<r2.getArea();
+    return 0;
+}
